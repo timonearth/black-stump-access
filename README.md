@@ -1,15 +1,17 @@
 # Black Stump staff access
 
-Status: the online list is ready, but it is NOT connected to the world yet. Editing it currently does not change backstage access. The in-world guest panel has not been installed.
+Implemented in the Unity main scene (S129), ready for Build & Test. It will affect the published world only after that version is uploaded.
 
-## Editing the list
+## Permanent staff
 
-Open staff.txt on GitHub, choose the pencil button, put one exact VRChat display name on each line, then Commit changes. Copy names from VRChat to preserve special characters. Names are public: never add passwords, tokens or private information.
+Edit [staff.txt](https://github.com/timonearth/black-stump-access/edit/main/staff.txt): one exact VRChat display name per line, then Commit changes. Copy the name from VRChat, including special characters. Names are public; do not add private information. List endpoint: https://timonearth.github.io/black-stump-access/staff.txt
 
-List URL: https://timonearth.github.io/black-stump-access/staff.txt
+Clients load the list on entry and refresh approximately every five minutes. GitHub Pages publishing/caching can add delay. Tim can use REFRESH STAFF on the backstage panel. A failed refresh retains the last successfully loaded list; a new client with no successful download has only the in-world fallback. Tim's existing owner access remains available offline.
 
-## Intended integration (not active yet)
+## Guest passes for this instance
 
-The planned world integration refreshes the list every five minutes, with a manual refresh button for Tim. GitHub Pages deployment and caching can add delay. Tim's existing owner access will remain as an offline fallback.
+Only timonearth sees the BACKSTAGE ACCESS panel beside the backstage cave controls, near the staff arrival point. Use PREVIOUS/NEXT to choose a person, then GRANT PASS. They can use the alley staff door or either stage-side staff entrance.
 
-Only timonearth will manage temporary backstage guests. Temporary access will not grant access-management or wardrobe-gate controls. TXL's guest-departure cleanup needs correcting and testing before this is connected to the doors.
+A pass remains valid if Tim leaves or the guest disconnects and rejoins the same active instance. It is not permanent and does not carry into a new instance. Use REVOKE PASS to remove it; offline grantees remain selectable. Revoke does not remove permanent staff status. Guests do not gain permission to manage access or operate the wardrobe gate.
+
+These lists match display names; they are not VRChat group roles or server-side security. Keep names current. Two-client ownership migration and late-join synchronization still need a real VRChat test; ClientSim grant/revoke, reconnect retention and permission checks passed.
