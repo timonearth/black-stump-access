@@ -1,7 +1,15 @@
 # Black Stump staff access
 
-Edit staff.txt using the pencil button on GitHub, put one exact VRChat display name on each line, then Commit changes. Copy names from VRChat to preserve special characters. Names are public. Do not put passwords, tokens or private information here.
+Status: the online list is ready, but it is NOT connected to the world yet. Editing it currently does not change backstage access. The in-world guest panel has not been installed.
 
-The world refreshes the list every 5 minutes. GitHub Pages deployment and caching can add delay. Tim can use REFRESH STAFF on the in-world access panel. Removing a name removes permanent staff permissions on refresh; temporary guest access is separate and can also be revoked in-world. Tim's owner access is retained in the world as an offline fallback.
+## Editing the list
 
-Only timonearth can grant temporary guest access. Guests can enter backstage, but cannot manage access or operate the public wardrobe gate. Guest grants expire when they leave the instance.
+Open staff.txt on GitHub, choose the pencil button, put one exact VRChat display name on each line, then Commit changes. Copy names from VRChat to preserve special characters. Names are public: never add passwords, tokens or private information.
+
+List URL: https://timonearth.github.io/black-stump-access/staff.txt
+
+## Intended integration (not active yet)
+
+The planned world integration refreshes the list every five minutes, with a manual refresh button for Tim. GitHub Pages deployment and caching can add delay. Tim's existing owner access will remain as an offline fallback.
+
+Only timonearth will manage temporary backstage guests. Temporary access will not grant access-management or wardrobe-gate controls. TXL's guest-departure cleanup needs correcting and testing before this is connected to the doors.
